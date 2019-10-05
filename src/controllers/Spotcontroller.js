@@ -2,6 +2,7 @@ const User = require('../models/User');
 const Spot = require('../models/Spot');
 
 module.exports = {
+    // Lista todos os Spots
     async index(req, res) {
         const { tech } = req.query;
 
@@ -9,7 +10,7 @@ module.exports = {
 
         return res.json(spots);
     },
-
+    // Cria um novo spots
     async store(req, res) {
         const { filename }  = req.file;
         const { company, techs, price } = req.body;
