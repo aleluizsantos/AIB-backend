@@ -17,7 +17,7 @@ module.exports = {
             user = await User.create({ name, email });
         }
 
-        return user ? res.json({ message: "User exists" }) : res.json(user);
+        return res.json(user);
         
     }
 };
